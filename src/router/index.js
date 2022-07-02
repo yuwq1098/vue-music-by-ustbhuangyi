@@ -52,10 +52,12 @@ const UserCenter = (resolve) => {
 }
 
 export default new Router({
+  base: window.__POWERED_BY_QIANKUN__ ? '/app-vue/' : '/',
+  //   mode: 'history',
   routes: [
     {
       path: '/',
-      redirect: '/recommend'
+      redirect: '/recommend' // 重定向
     },
     {
       path: '/recommend',

@@ -75,6 +75,129 @@
         'playHistory'
       ])
     },
+    created() {
+      // let arr = [1, 2, 3, 4, 2, 3, Symbol(2)]
+      // let arr1 = [{a: 1}, {c: 2}, {c: 2}, 4, 2, 3, Symbol(2)]
+      // // console.log(Array.isArray(arr1))
+      // let res = arr1.filter((n, i) => {
+      //   // return arr.indexOf(n) === i
+      //   return arr1.findIndex(item => item === n) === i
+      // })
+      // console.log()
+      // console.log(res, 'res')
+
+      // console.log([...new Set(arr1)])
+
+      // let obj = {a: 5}
+      // Object.freeze(obj, 'a', 15)
+      // console.log(obj, 'obj')
+      // var func = []
+      // for (var i = 0; i < 10; i++) {
+      //   func.push((function(n) {
+      //     console.log(n)
+      //   })(i))
+      // }
+      // console.log(window)
+      // function* fibs() {
+      //   let a = 0
+      //   let b = 1
+      //   while (true) {
+      //     yield a;
+      //     [a, b] = [b, a + b]
+      //   }
+      // }
+
+      // let [first, second, third, fourth, fifth, sixth] = fibs()
+      // console.log(first, second, third, fourth, fifth, sixth)
+
+      // class RangeIterator {
+      //   // 构造器
+      //   constructor(start, stop) {
+      //     this.value = start
+      //     this.stop = stop
+      //     // this.next = () => {
+      //     //   var value = this.value
+      //     //   if (value < this.stop) {
+      //     //     this.value++
+      //     //     return {done: false, value: value}
+      //     //   }
+      //     //   return {done: true, value: undefined}
+      //     // }
+      //   }
+
+      //   [Symbol.iterator]() {
+      //     let _this = this
+      //     console.dir(this)
+      //     return {
+      //       next: function () {
+      //         var value = _this.value
+      //         if (value < _this.stop) {
+      //           _this.value++
+      //           return {done: false, value: value}
+      //         }
+      //         return {done: true, value: undefined}
+      //       }
+      //     }
+      //   }
+
+      // }
+
+      // function range(start, stop) {
+      //   return new RangeIterator(start, stop)
+      // }
+      // let a1 = range(0, 3)
+      // console.log(a1[Symbol.iterator]().next())
+      // console.log(a1[Symbol.iterator]().next())
+      // console.log(a1[Symbol.iterator]().next())
+      // console.log(a1[Symbol.iterator]().next())
+      // console.log(a1.next)
+      // for (var value of range(0, 3)) {
+      //   console.log(value) // 0, 1, 2
+      // }
+
+      // function* fibs() {
+      //   let a = 0
+      //   let b = 1
+      //   while (true) {
+      //     [a, b] = [b, a + b]
+      //     yield [a, b]
+      //   }
+      // }
+
+      // let t1 = fibs()
+      // console.log(t1[Symbol.iterator]().next())
+      // console.log(t1[Symbol.iterator]().next())
+      // console.log(t1[Symbol.iterator]().next())
+      // console.log(t1[Symbol.iterator]().next())
+      // console.log(t1[Symbol.iterator]().next())
+      // console.log(t1[Symbol.iterator]().next())
+
+      // // 0, 1
+      // // 1, 1
+      // // 1, 2
+      // // 2, 3
+      // // 3, 5
+      // // 5, 8
+
+      // let [first, second, third, fourth, fifth, sixth] = fibs()
+      // console.log(first, second, third, fourth, fifth, sixth)
+      // // sixth // 5
+
+      function* f() {
+        console.log('执行了！')
+      }
+
+      var generator = f()
+      console.log(generator)
+      console.log(generator.next())
+
+
+
+      // aaaa
+      // setTimeout(function () {
+      //   generator.next()
+      // }, 2000)
+    },
     methods: {
       show() {
         this.showFlag = true
