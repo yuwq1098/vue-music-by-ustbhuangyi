@@ -187,8 +187,6 @@
         console.log('执行了！')
       }
 
-      console.log('改动一点有用吗')
-
       var generator = f()
       console.log(generator)
       console.log(generator.next())
